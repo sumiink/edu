@@ -2,7 +2,7 @@ package com.edu.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Set;
@@ -18,7 +18,7 @@ public class SecondServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public SecondServlet() {
         super();
-    }
+    } 
 // init() -> request, response -> service(request, response)
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");

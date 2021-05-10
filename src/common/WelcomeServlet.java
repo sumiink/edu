@@ -17,7 +17,7 @@ public class WelcomeServlet extends HttpServlet {
 	// Servlet (I.F) => GenericServlet => HttpServlet
 	// init -> service -> destroy 
 	private static final long serialVersionUID = 1L;
-
+ 
     public WelcomeServlet() {
         super();
     }
