@@ -7,13 +7,13 @@ import javax.servlet.http.HttpServlet;
 
 @WebServlet("/local")
 public class LocalTestServlet extends HttpServlet {
-	int number = 0; 		//doGet안에서는 독립적으로 각각 실행되고 local변수(현재위치)에서 선언된상태에서는 공유되어 실행됨.
-	
+			//local변수doGet안에서는 독립적으로 각각 실행되고 맴버변수(현재위치)에서 선언된상태에서는 공유되어 실행됨.
+	int number = 0;
 	@Override
 	protected void doGet(javax.servlet.http.HttpServletRequest req, javax.servlet.http.HttpServletResponse resp)
 			throws javax.servlet.ServletException, java.io.IOException {
 		String str = req.getParameter("msg");
-
+ 
 		resp.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = resp.getWriter();
 		out.print("<html><head><title>Thread Test</title></head>");

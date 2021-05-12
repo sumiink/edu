@@ -4,9 +4,18 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
 	<display-name>edu</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+
+	<context-param>
+		<param-name>contextConfig</param-name>
+		<param-value>/WEB-INF/context.xml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>data1</param-name>
+		<param-value>100</param-value>
+	</context-param>
+
+
 	<servlet>
 		<servlet-name>initParam</servlet-name>
 		<servlet-class>com.edu.test.InitParamServlet</servlet-class>
@@ -22,27 +31,21 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>initParam</servlet-name>
-	<url-pattern>/initParam</url-pattern>
-	</servlet-mapping>	
-	
-	
-	
+		<url-pattern>/initParam</url-pattern>
+	</servlet-mapping>
+
+
 	<servlet>
-	<servlet-name>addInfo</servlet-name>
-	<servlet-class>com.edu.test.AdditionalInfoServlet</servlet-class>
+		<servlet-name>addInfo</servlet-name>
+		<servlet-class>com.edu.test.AdditionalInfoServlet</servlet-class>
 	</servlet>
-	<servlet-mapping> 
+	<servlet-mapping>
 		<servlet-name>addInfo</servlet-name>
 		<url-pattern>/addInfo/*</url-pattern>
 	</servlet-mapping>
-	
-	<!-- <servlet>
-		<servlet-name>first</servlet-name>
-		<servlet-class>com.edu.test.FirstServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>first</servlet-name>
-		<url-pattern>/first</url-pattern>
-	</servlet-mapping> -->
+
+	<!-- <servlet> <servlet-name>first</servlet-name> <servlet-class>com.edu.test.FirstServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>first</servlet-name> <url-pattern>/first</url-pattern> 
+		</servlet-mapping> -->
 
 </web-app> 
