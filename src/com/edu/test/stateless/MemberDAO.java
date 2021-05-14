@@ -16,7 +16,14 @@ public class MemberDAO {
 		DataSource ds = DataSource.getIncetance();
 		conn = ds.getConnection();
 	}
-	
+	public Member checkInfo(String id, String pwd) {
+		//id, pwd조회해서 한건 가져와 
+		String sql = "select member_id, member_pwd from member";
+		
+		
+		
+		return null;
+	}
 	public List<Member> getMemberList(){
 		String sql = "select * from member order by 1";
 		List<Member> list = new ArrayList<>();
@@ -29,7 +36,6 @@ public class MemberDAO {
 				mem.setMemberId(rs.getString("member_id"));
 				mem.setMemberName(rs.getString("member_name"));
 				mem.setMemberPwd(rs.getString("member_pwd"));
-				
 				
 				list.add(mem);
 			}
