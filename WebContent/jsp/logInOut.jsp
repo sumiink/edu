@@ -15,10 +15,27 @@
 	}
 %>
 <%=msg %>
-	<form action="logInfo.jsp" method="post">
+<%
+	if(session.getAttribute("info") == null) {
+%>
+<form action="logInfo.jsp" method="POST">
+	ID: <input type="text" name="id"><br>
+	비밀번호: <input type="password" name="pwd"><br>
+	<input type="submit" value="로그인">
+</form>
+<% 
+	}else{
+	%>
+	<a href="logInfo.jsp">로그아웃</a>
+	<%	
+	}
+%>
+<!--  	<form action="logInfo.jsp" method="post">
 		ID: <input type="text" name="id"><br>
 		비밀번호: <input type="password" name="pwd"><br>
 		<input type="submit" value="로그인">
 	</form>
+	<a href="logout.jsp">로그아웃</a>
+-->
 </body>
 </html>
